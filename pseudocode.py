@@ -27,12 +27,19 @@ def tribonacci_iterative(n):
 
 def tribonacci_memoized(n):
     C = [None] * max(n + 1, 3)
-    tribonacci_memoized_helper(n, C)
-    return 0
+    C[0] = 0
+    C[1] = 0
+    C[2] = 1
+    trib = tribonacci_memoized_helper(n, C)
+    return trib
 
 def tribonacci_memoized_helper(n, C):
     if C[n] is not None:
         return C[n]
+    else:
+        result = tribonacci_memoized_helper(n-3, C) + tribonacci_memoized_helper(n-2, C)+tribonacci_memoized_helper(n-1, C)
+    C[n] = result
+    return result
 
 
 def tribonacci_dynamic(n):
@@ -46,4 +53,4 @@ def tribonacci_dynamic(n):
 
 # Test functions here
 for i in range(0, 10):
-    print(tribonacci_iterative(i))
+    print(tribonacci_memoized(i))
