@@ -24,7 +24,6 @@ def tribonacci_iterative(n):
     return trib
 
 
-
 def tribonacci_memoized(n):
     C = [None] * max(n + 1, 3)
     C[0] = 0
@@ -50,7 +49,3 @@ def tribonacci_dynamic(n):
     for i in range(3, n + 1):
         A[i] = A[i - 3] + A[i - 2] + A[i - 1]
     return A[n]
-
-# Test functions here
-for i in range(0, 10):
-    print(tribonacci_memoized(i))
