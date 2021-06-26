@@ -12,7 +12,7 @@ int main() {
 
   std::cout << "\nMEMOIZED METHOD\n";
   for (int i = 0; i < 10; i++) {
-    //std::cout << tribonacci_memoized(i) << ", ";
+    std::cout << tribonacci_memoized(3) << ", ";
   }
   std::cout << "\nDYANMIC METHOD\n";
   for (int i = 0; i < 10; i++) {

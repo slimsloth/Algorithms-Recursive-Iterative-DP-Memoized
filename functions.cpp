@@ -57,6 +57,7 @@ int tribonacci_memoized_helper(int n, std::vector<int> C) {
              tribonacci_memoized_helper(n - 2, C) +
              tribonacci_memoized_helper(n - 1, C);
   }
+  std::cout<<"\n" << result << "\n";
   C[n] = result;
   return result;
 }
