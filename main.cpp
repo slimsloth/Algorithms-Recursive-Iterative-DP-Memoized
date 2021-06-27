@@ -10,21 +10,54 @@ int main() {
    * dynamically.                                                    *
    *******************************************************************/
   std::cout << "\nRECURSIVE METHOD\n";
-  for (int i = 0; i < 10; i++) {
-    std::cout << tribonacci_recursive(i) << ", ";
+  std::cout << "| n |value \n";
+  for (int i = 0; i < 25; i++) {
+    std::cout << "| " << i + 1 << " | " << tribonacci_recursive(i) << "\n";
   }
   std::cout << "\nITERATIVE METHOD\n";
-  for (int i = 0; i < 10; i++) {
-    std::cout << tribonacci_iterative(i) << ", ";
+  std::cout << "| n |value \n";
+  for (int i = 0; i < 25; i++) {
+    std::cout << "| " << i + 1 << " | " << tribonacci_iterative(i) << "\n";
   }
   std::cout << "\nMEMOIZED METHOD\n";
-  for (int i = 0; i < 10; i++) {
-    std::cout << tribonacci_memoized(i) << ", ";
+  std::cout << "| n |value \n";
+  for (int i = 0; i < 25; i++) {
+    std::cout << "| " << i + 1 << " | " << tribonacci_memoized(i) << "\n";
   }
   std::cout << "\nDYANMIC METHOD\n";
-  for (int i = 0; i < 10; i++) {
-    std::cout << tribonacci_dynamic(i) << ", ";
+  std::cout << "| n |value \n";
+  for (int i = 0; i < 25; i++) {
+    std::cout << "| " << i + 1 << " | " << tribonacci_dynamic(i) << "\n";
   }
   std::cout << "\n\nEnd of output\n\n";
+
+  //*********CSV OUTPUT***************************************************
+  std::ofstream outFile;
+  outFile.open("./output/recursive.csv");
+  outFile << "n,value\n";
+  for (int i = 0; i < 25; i++) {
+    outFile << i + 1 << "," << tribonacci_recursive(i) << "\n";
+  }
+  outFile.close();
+  outFile.open("./output/iterative.csv");
+  outFile << "n,value\n";
+  for (int i = 0; i < 25; i++) {
+    outFile << i + 1 << "," << tribonacci_iterative(i) << "\n";
+  }
+  outFile.close();
+  outFile.open("./output/memoized.csv");
+  outFile << "n,value\n";
+  for (int i = 0; i < 25; i++) {
+    outFile << i + 1 << "," << tribonacci_recursive(i) << "\n";
+  }
+  outFile.close();
+  outFile.open("./output/dynamic.csv");
+  outFile << "n,value\n";
+  for (int i = 0; i < 25; i++) {
+    outFile << i + 1 << "," << tribonacci_dynamic(i) << "\n";
+  }
+  outFile.close();
+  //***END OF CSV OUTPUT***************************************************
+
   return 0;
 }
