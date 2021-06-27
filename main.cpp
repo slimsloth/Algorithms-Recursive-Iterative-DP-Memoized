@@ -9,10 +9,9 @@ int main() {
   for (int i = 0; i < 10; i++) {
       std::cout << tribonacci_iterative(i) << ", ";
   }
-
   std::cout << "\nMEMOIZED METHOD\n";
   for (int i = 0; i < 10; i++) {
-    std::cout << tribonacci_memoized(3) << ", ";
+    std::cout << tribonacci_memoized(i) << ", ";
   }
   std::cout << "\nDYANMIC METHOD\n";
   for (int i = 0; i < 10; i++) {
