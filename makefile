@@ -1,7 +1,7 @@
 OBJS	= main.o functions.o
 SOURCE	= main.cpp functions.cpp
 HEADER	= header.h
-OUT	= proj3
+OUT	= proj4
 CC	 = g++
 FLAGS	 = -g -c -Wall
 LFLAGS	 =
