@@ -13,7 +13,7 @@ Each design pattern takes n as an input and outputs the nth element of the tribo
 Output will be displayed both in the console and a csv file in the output directory.
 ### Project Requirements
 #### 1. Mathematical Analysis
-- [ ] Complete Exercise 11-3 (a) from Algorithm Design in Three Acts.
+- [x] Complete Exercise 11-3 (a) from Algorithm Design in Three Acts.
 - [x] Pseudocode for exercise 11-3(a)
 #### 2. Implementation in C++
 Implement four programs in C++17. Each program should implement a solution to the tribonacci number problem using one of the following:
